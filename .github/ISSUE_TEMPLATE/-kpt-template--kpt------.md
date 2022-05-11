@@ -2,7 +2,7 @@
 name: "[KPT Template] KPT 회고 양식"
 about: A template for KPT
 title: "[KPT] N주차 0요일"
-labels: ''
+labels: retrospect
 assignees: ''
 
 ---
