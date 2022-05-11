@@ -2,7 +2,7 @@
 name: "[Task Card Template] 태스트 카드 양식 "
 about: A template for task card
 title: "[Task Card] / OOO / 2022-05-OO"
-labels: ''
+labels: Task Card
 assignees: ''
 
 ---
@@ -14,3 +14,6 @@ assignees: ''
 1. [ ] Job1
 2. [ ] Job2
 3. [ ] Job3
+
+#### PUSH
+- [ ] 개인 저장소에 git push 완료
