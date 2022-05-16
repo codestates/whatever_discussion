@@ -1,0 +1,21 @@
+.header {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0077B6;
+  color: #fff;
+  font-size: 24px;
+}
+
+.header > img:first-child {
+  margin-left: 20px;
+  height: 80px;
+  margin-top: -5px;
+  margin-right: 800px;
+}
+
+.header > img:last-child {
+  height: 50px;
+  margin-right: 20px;
+}
