@@ -5,7 +5,18 @@
 
 body {
   width: 1400px;
+<<<<<<< HEAD
+=======
+  /* height: 100vh; */
+>>>>>>> e771240a9aa0bb9594c9525716fed69a4fbca031
   border: 1px solid #000;
-  border-top: none;
   margin: 0 auto;
+  border-top: 0;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background-color: #0077B6;
+  color: #fff;
 }
