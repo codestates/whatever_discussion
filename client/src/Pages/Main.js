@@ -9,12 +9,15 @@ function Main() {
       </div>
 
       <div id='searchLine'>
-        <button id='popular'>인기순</button>
-        <button id='latest'>최신순</button>
-        <input id='searchBox' type='text' placeholder='검색어입력'></input>
-        <button id='search'>검색</button>
+        <div>
+         <button id='popular'>인기순</button>
+         <button id='latest'>최신순</button>
+         </div>
+        <div>
+         <input id='searchBox' type='search' placeholder='검색어입력'></input>
+         <button id='search'>검색</button>
+        </div>
       </div>
-
       <div id='contentsSector'>
         <ContentsBox/>
       </div>
