@@ -1,0 +1,50 @@
+#banner {
+  height: 255px;
+  display: flex;
+}
+
+#searchLine {
+  height: 60px; 
+  border: thin outset black; 
+  border-right-style: none;
+  border-left-style: none;
+}
+
+#popular {
+  border: 0;
+  background-color:white;
+  margin-left:40px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#latest {
+  border: 0;
+  background-color:white; 
+  margin-left: 16px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#searchBox {
+  margin-left: 980px;
+  padding: 15px 23px 11px;
+  border: thin outset black; 
+  font-size: 13px;
+  text-align:center;
+}
+
+#search {
+  padding: 11px 22px 11px;
+  margin-top:8px;
+  margin-right:6px;
+  font-size: 17px;
+  float: right;
+  background-color: white;
+  border: thin outset black; 
+}
+
+#contentsSector {
+  display: flex;
+  height: 90vh;
+}
