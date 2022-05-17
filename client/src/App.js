@@ -8,6 +8,7 @@ import Footer from './Components/Footer'
 import Main from './Pages/Main'
 import Signin from './Pages/Signin'
 import Signup from './Pages/Signup';
+import Post from './Pages/Post';
 
 function App() {
   return (
@@ -15,7 +16,8 @@ function App() {
       <Header />
       {/* <Main /> */}
       {/* <Signin /> */}
-      <Signup />
+      {/* <Signup /> */}
+      <Post />
       <Footer />
     </div>
   );
