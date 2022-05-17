@@ -5,8 +5,14 @@
 
 body {
   width: 1400px;
-  height: 100vh;
+  /* height: 100vh; */
   border: 1px solid #000;
-  border-top: none;
   margin: 0 auto;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background-color: #0077B6;
+  color: #fff;
 }
