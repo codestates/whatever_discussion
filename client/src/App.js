@@ -14,10 +14,10 @@ function App() {
   return (
     <div>
       <Header />
-      {/* <Main /> */}
+      <Main /> 
       {/* <Signin /> */}
       {/* <Signup /> */}
-      <Post />
+      {/* {<Post />} */}
       <Footer />
     </div>
   );

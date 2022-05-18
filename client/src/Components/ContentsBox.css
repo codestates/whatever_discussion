@@ -21,14 +21,16 @@
 }
 
 .Topic {
-    margin:16px;
+    margin:10px;
     width:50px;
-    padding:3px;
+    padding: 4px 4px 6px 4px;
     border-radius:5px;
     font-size:18px;
-    color:white;
-    background-color:blue;
+    color: #fff;
+    background-color: #0077B6;    
     text-align:center;
+    font-weight: bold;
+    
 }
 
 .title {
