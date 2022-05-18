@@ -17,7 +17,6 @@ function Header() {
     <div>
       <div className='header'>
         <a href='/'><img src={logo} alt='logo'></img></a>
-        <a><p>ABOUT</p></a>
         <a><p>WRITE</p></a>
         <img src={accountIcon} alt='accountIcon' onClick={setDisplay}></img>
       </div>
