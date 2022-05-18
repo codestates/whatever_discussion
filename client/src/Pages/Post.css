@@ -16,8 +16,10 @@
 }
 
 .post > img {
-  max-width: 700px;
-  max-height: 400px;
+  /* max-width: 700px;
+  max-height: 400px; */
+  width: 700px;
+  height: 400px;
   margin-top: 40px;
   border: 2px solid #000;
 }
@@ -169,6 +171,10 @@
   font-weight: bold;
 }
 
+.comments {
+  margin-bottom: 10px;
+}
+
 .comments > .commentWrite {
   display: flex;
   flex-direction: column;
@@ -190,76 +196,85 @@
   align-items: center;
 }
 
-.comments > .commentWrite > div:last-child > input {
+.comments > .commentWrite > div:last-child > form {
+  display: flex;
+  align-items: center;
+}
+
+.comments > .commentWrite > div:last-child > form > input:first-child {
   font-size: 16px;
   width: 1130px;
   padding: 5px;
   margin-top: 5px;
 }
 
-.comments > .commentWrite > div:last-child > button {
-  margin-right: 5px;
+.comments > .commentWrite > div:last-child > form > input:last-child {
+  margin-left: 5px;
   padding: 5px;
   border-radius: 5px;
   font-size: 16px;
+  border: 0;
+  outline: 0;
+  background-color: #0077B6;
+  color: #fff;
 }
 
-.comments > .commentLists {
+.commentLists > div {
   display: flex;
   flex-direction: column;
   border: 1px solid #000;
   margin-top: 10px;
 }
 
-.comments > .commentLists > div:first-child {
+.commentLists > div > div:first-child {
   display: flex;
   /* border: 1px solid yellow; */
   justify-content: space-between;
 }
 
-.comments > .commentLists > div:first-child > div:first-child {
+.commentLists > div > div:first-child > div:first-child {
   /* border: 1px solid #000; */
   display: flex;
   align-items: center;
   padding: 2px 0;
 }
 
-.comments > .commentLists > div:first-child > div:first-child > p:first-child {
+.commentLists > div > div:first-child > div:first-child > p:first-child {
   font-size: 18px;
   font-weight: bold;
   margin-left: 5px;
 }
 
-.comments > .commentLists > div:first-child > div:first-child > div {
+.commentLists > div > div:first-child > div:first-child > div {
   background-color: #0077B6;
   color: #fff;
   padding: 2px 5px;
   margin-left: 5px;
 }
 
-.comments > .commentLists > div:first-child > div:first-child > p:last-child {
+.commentLists > div > div:first-child > div:first-child > p:last-child {
   margin-left: 5px;
 }
 
-.comments > .commentLists > div:first-child > div:last-child {
+.commentLists > div > div:first-child > div:last-child {
   /* border: 1px solid blue; */
   display: flex;
 }
 
-.comments > .commentLists > div:first-child > div:last-child {
+.commentLists > div > div:first-child > div:last-child {
   /* border: 1px solid blue; */
   display: flex;
   align-items: center;
 }
 
-.comments > .commentLists > div:first-child > div:last-child > button:first-child {
+.commentLists > div > div:first-child > div:last-child > button:first-child {
   font-size: 18px;
   padding: 2px 5px;
   background-color: grey;
   color: #000;
 }
 
-.comments > .commentLists > div:first-child > div:last-child > div:nth-child(2) {
+.commentLists > div > div:first-child > div:last-child > div:nth-child(2) {
   margin-left: 5px;
   background-color: blue;
   color: #fff;
@@ -267,27 +282,28 @@
   padding: 2px 5px;
 }
 
-.comments > .commentLists > div:first-child > div:last-child > p:nth-child(3) {
+.commentLists > div > div:first-child > div:last-child > p:nth-child(3) {
   margin-left: 5px;
 }
 
-.comments > .commentLists > div:first-child > div:last-child > p:nth-child(4) {
-  margin: 0px 5px 0px 2px;
+.commentLists > div > div:first-child > div:last-child > p:nth-child(4) {
+  margin: 0px 5px 0px 0px;
 } 
 
 
-.comments > .commentLists > div:last-child {
+.commentLists > div > div > div:last-child {
   /* border: 1px solid red; */
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.comments > .commentLists > div:last-child > p {
-  padding: 5px;
+.commentLists > div > div > div:last-child > p {
+  padding: 0px 5px 2px 0px;
+  margin-left: 5px;
 }
 
-.comments > .commentLists > div:last-child > img {
+.commentLists > div > div > div:last-child > img {
   width: 30px;
   margin-right: 2px;
 }
