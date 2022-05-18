@@ -17,7 +17,7 @@ function Main() {
         </div>
       </div>
       <div className='contentsSector'>
-        <ContentsBox/> 
+        <ContentsBox />
       </div>
 
     </div>
