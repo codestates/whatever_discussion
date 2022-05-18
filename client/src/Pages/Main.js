@@ -2,7 +2,7 @@ import './Main.css';
 import ContentsBox from '../Components/ContentsBox.js'
 import Logo from '../Images/LogoBlack.png'
 
-function Main() {
+function Main({dummy}) {
   return (
     <div>
       <div className='banner'>
@@ -21,9 +21,8 @@ function Main() {
         </div>
       </div>
       <div className='contentsSector'>
-        <ContentsBox />
+        {dummy.content.map((content)=><ContentsBox content={content}/>)}
       </div>
-
     </div>
   );
 }

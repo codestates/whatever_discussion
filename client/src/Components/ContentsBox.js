@@ -2,12 +2,10 @@ import './ContentsBox.css';
 import accountIcon from '../Icons/account.svg'
 import voteIcon from '../Icons/vote.svg'
 import repleIcon from '../Icons/repleIcon.svg'
-import dummy from './content.json'
 
-function ContentsBox() {
+function ContentsBox({content}) {
   return (
     <div>
-      {dummy.content.map((content) => 
       <div className='board' key={content.id}>
         <div className='imgBox'>
           <img src={content.image}></img>
@@ -27,9 +25,6 @@ function ContentsBox() {
             </div>
         </div>
       </div>
-      )}
-      
-
     </div>
   );
 }

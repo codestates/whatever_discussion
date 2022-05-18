@@ -14,8 +14,8 @@
 }
 
 .imgBox > img {
-    max-width: 400px;
-    max-height: 280px;
+    width: 400px;
+    height: 240px;
 }
 
 .topic {
@@ -33,6 +33,7 @@
 
 .title {
     margin-bottom:8px;
+    font-size:28px;
     text-align:center;
     color:black;
 }
