@@ -30,7 +30,7 @@
 }
 
 .signIn > div {
-  width: 312px;
+  width: 324px;
   display: flex;
   align-items: center;
   margin-top: 20px;
@@ -41,9 +41,14 @@
   font-size: 16px;
   color: #0077B6;
   font-weight: bold;
+  margin-left: 2px;
 }
 
-.signIn > div > button {
+.signIn > div > input {
   font-size: 20px;
   padding: 4px 7px;
+  border: 0;
+  outline: 0;
+  background-color: #0077B6;
+  color: #fff;
 }
