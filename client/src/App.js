@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 // Components
 import Header from './Components/Header';
@@ -12,14 +13,16 @@ import Post from './Pages/Post';
 
 function App() {
   return (
-    <div>
+    <Router>
       <Header />
-      <Main /> 
-      {/* <Signin /> */}
-      {/* <Signup /> */}
-      {/* {<Post />} */}
+      <Routes>
+        <Route exact path='/' element={ <Main /> } /> 
+        <Route path='/signin' element={ <Signin /> } /> 
+        <Route path='/signup' element={ <Signup /> } /> 
+        <Route path='/post' element={ <Post /> } /> 
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
