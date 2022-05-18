@@ -23,8 +23,9 @@
 .menu {
   width: 100px;
   border-left: 1px solid #000;
-  position: absolute;
-  right: 215px;
+  /* position: absolute;
+  right: 215px; */
+  float: right;
 }
 
 .menu a {
