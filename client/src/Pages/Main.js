@@ -4,22 +4,20 @@ import ContentsBox from '../Components/ContentsBox.js'
 function Main() {
   return (
     <div>
-
-      <div id='banner'>
+      <div className='banner'>
       </div>
-
-      <div id='searchLine'>
+      <div className='searchLine'>
         <div>
-         <button id='popular'>인기순</button>
-         <button id='latest'>최신순</button>
+         <button className='popular'>인기순</button>
+         <button className='latest'>최신순</button>
          </div>
         <div>
-         <input id='searchBox' type='search' placeholder='검색어입력'></input>
-         <button id='search'>검색</button>
+         <input className='searchBox' type='search' placeholder='검색어입력'></input>
+         <button className='search'>검색</button>
         </div>
       </div>
-      <div id='contentsSector'>
-        <ContentsBox/>
+      <div className='contentsSector'>
+        <ContentsBox/> 
       </div>
 
     </div>
