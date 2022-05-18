@@ -2,6 +2,8 @@ import './Post.css';
 import postPic from '../Images/post.jpg'
 import Comment from '../Components/Comment';
 import dummy from '../Components/comments.json'
+import content from '../Components/content.json'
+
 
 function Post() {
   return (
@@ -9,14 +11,14 @@ function Post() {
       <div className='postpage'>
         
         <div className='post'>
-          <img src={postPic} alt='Post Image'></img>
+          <img src={content.content[0].image} alt='Post Image'></img>
           <div className='subject'>
             <div>topic</div>
-            <p>제목이 들어갈 자리</p>
+            <p>{content.content[0].subject}</p>
           </div>
           <div className='content'>
             <div>
-              <p>해당 내용이 들어갈 자리입니다.</p>
+              <p>{content.content[0].content}</p>
             </div>
           </div>
           
