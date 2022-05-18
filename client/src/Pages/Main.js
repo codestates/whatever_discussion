@@ -1,10 +1,14 @@
 import './Main.css';
 import ContentsBox from '../Components/ContentsBox.js'
+import Logo from '../Images/LogoBlack.png'
 
 function Main() {
   return (
     <div>
       <div className='banner'>
+        <img src={Logo} alt='logo'></img>
+        <h1>whatever_discussion</h1>
+        <p>MBTI와 함께하는 일상의 사소한 논쟁</p>
       </div>
       <div className='searchLine'>
         <div>
