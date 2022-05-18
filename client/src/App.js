@@ -1,9 +1,9 @@
 import './App.css';
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-import {BrowserRouter as Route,Redirect } from "react-router-dom";
 import axios from 'axios';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import dummy from './Components/content.json'
+
 
 // Components
 import Header from './Components/Header';
@@ -25,19 +25,17 @@ function App() {
     { headers: {Accept: "application/json","Content-Type": "application/json"},
     withCredentials: true
   })
-  setUserInfo(data)
-  setIsSignin(true)
+    setUserInfo(data)
+    setIsSignin(true)
   };
 
   const handleResponseSuccess = (token) => {
-    isAuthenticated(token);
-  };
-
-  const handleSignout = () => {
-    axios.post('https://api.whatever_discussion.co.kr/auth/signout').then((res) => {
-      setUserInfo(null);
-      setIsSignin(false);
-    });
+    if(token){
+      isAuthenticated(token)
+      return alert('You are successfully logged in.')
+    } else {
+      return alert('The user is not in the database.')
+      }  
   };
 
   useEffect(() => {
@@ -48,8 +46,8 @@ function App() {
     <Router>
       <Header />
       <Routes>
-        <Route exact path='/' element={ <Main /> } /> 
-        <Route path='/signin' element={ <Signin /> } /> 
+        <Route exact path='/' element={ <Main dummy={dummy}/> } /> 
+        <Route path='/signin' element={ <Signin handleResponseSuccess={handleResponseSuccess} isSignin={isSignin} /> } /> 
         <Route path='/signup' element={ <Signup /> } /> 
         <Route path='/post' element={ <Post /> } /> 
       </Routes>

@@ -6,11 +6,7 @@ import { useState } from 'react';
 function Header() {
   const [style, setStyle] = useState({display: 'none'})
   const setDisplay = function () {
-<<<<<<< HEAD
-    if(style.display === 'none') {
-=======
     if(style.display === 'none') { 
->>>>>>> 92bc6f1d0153334e86b10b245c35f11aad235a73
       setStyle({display: 'block'})
     } else {
       setStyle({display: 'none'})

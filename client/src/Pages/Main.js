@@ -1,7 +1,7 @@
 import './Main.css';
 import ContentsBox from '../Components/ContentsBox.js'
 
-function Main() {
+function Main({dummy}) {
   return (
     <div>
       <div className='banner'>
@@ -17,13 +17,8 @@ function Main() {
         </div>
       </div>
       <div className='contentsSector'>
-<<<<<<< HEAD
-        <ContentsBox/>
-=======
-        <ContentsBox />
->>>>>>> 92bc6f1d0153334e86b10b245c35f11aad235a73
+        {dummy.content.map((content)=><ContentsBox content={content}/>)}
       </div>
-
     </div>
   );
 }
