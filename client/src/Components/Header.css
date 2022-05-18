@@ -12,7 +12,7 @@
   margin-left: 20px;
   height: 80px;
   margin-top: -5px;
-  margin-right: 950px;
+  /* margin-right: 950px; */
 }
 
 .header > img {
@@ -23,8 +23,9 @@
 .menu {
   width: 100px;
   border-left: 1px solid #000;
-  position: absolute;
-  right: 215px;
+  /* position: absolute;
+  right: 215px; */
+  float: right;
 }
 
 .menu a {
