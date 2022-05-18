@@ -1,16 +1,21 @@
 
 .board {
     margin: 30px;
-    height:420px;
+    height:380px;
     width: 400px;
     border: 1.5px solid black;
 }
 
 .imgBox {
-    width:100%;
+    /* width:100%;
     height:280px;
     background-color:skyblue;
-    border-bottom:1.5px solid black;
+    border-bottom:1.5px solid black; */
+}
+
+.imgBox > img {
+    max-width: 400px;
+    max-height: 280px;
 }
 
 .topic {

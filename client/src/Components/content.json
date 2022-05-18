@@ -1,0 +1,21 @@
+{
+  "content": [
+    {
+      "id": 1,
+      "subject": "깻잎 논쟁",
+      "image": "https://cdn.nbntv.co.kr/news/photo/202201/951837_61974_5322.jpg",
+      "userId": "김코딩",
+      "comments": 12,
+      "likes": 28
+    },
+    
+    {
+      "id": 2,
+      "subject": "패딩 논쟁",
+      "image": "https://i.smalljoys.me/2022/02/1af6dcdf-3019-407d-8d58-3992ee822dba.jpeg",
+      "userId": "박코딩",
+      "comments": 34,
+      "likes": 72
+    }
+  ]
+}
