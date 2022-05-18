@@ -23,7 +23,8 @@
 .menu {
   width: 100px;
   border-left: 1px solid #000;
-  float: right;
+  position: absolute;
+  right: 215px;
 }
 
 .menu a {
