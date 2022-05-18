@@ -43,7 +43,11 @@
   font-weight: bold;
 }
 
-.signIn > div > button {
+.signIn > div > input {
   font-size: 20px;
   padding: 4px 7px;
+  border: 0;
+  outline: 0;
+  background-color: #0077B6;
+  color: #fff;
 }
