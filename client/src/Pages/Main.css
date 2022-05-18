@@ -1,6 +1,18 @@
 .banner {
-  height: 255px;
+  height: 400px;
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner > img {
+  width: 400px;
+}
+
+.banner > p {
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 .searchLine {
