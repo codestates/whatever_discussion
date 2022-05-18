@@ -1,15 +1,33 @@
 import './Header.css';
 import logo from '../Images/Logo.png'
 import accountIcon from '../Icons/account.svg'
+import { useState } from 'react';
 
 function Header() {
+  const [style, setStyle] = useState({display: 'block'})
+  const setDisplay = function () {
+    const menu = document.getElementsByClassName('menu')
+    if(menu.style === 'none') {
+      setStyle({display: 'block'})
+    } else {
+      setStyle({display: 'none'})
+    }
+
+    console.log(style)
+  }
+
   return (
     <div>
       <div className='header'>
-        <img src={logo} alt='logo'></img>
-        <p>ABOUT</p>
-        <p>WRITE</p>
-        <img src={accountIcon} alt='accountIcon'></img>
+        <a href='/'><img src={logo} alt='logo'></img></a>
+        <a><p>ABOUT</p></a>
+        <a><p>WRITE</p></a>
+        <img src={accountIcon} alt='accountIcon' onClick={setDisplay}></img>
+      </div>
+      <div className='menu' style={style}>
+        <a href='/signup'><div>회원가입</div></a>
+        <a href='/signin'><div>Login</div></a>
+        <a><div>Mypage</div></a>
       </div>
     </div>
   );

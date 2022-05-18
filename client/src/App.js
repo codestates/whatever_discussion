@@ -1,8 +1,12 @@
 import './App.css';
+<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import {BrowserRouter as Route,Redirect } from "react-router-dom";
 import axios from 'axios';
 
+=======
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+>>>>>>> 22e01d35cb6c3995823af8e21cdaf0ab2102d718
 
 // Components
 import Header from './Components/Header';
@@ -46,14 +50,16 @@ function App() {
   }, []);
 
   return (
-    <div>
+    <Router>
       <Header />
-      <Main /> 
-      {/* <Signin /> */}
-      {/* <Signup /> */}
-      {/* {<Post />} */}
+      <Routes>
+        <Route exact path='/' element={ <Main /> } /> 
+        <Route path='/signin' element={ <Signin /> } /> 
+        <Route path='/signup' element={ <Signup /> } /> 
+        <Route path='/post' element={ <Post /> } /> 
+      </Routes>
       <Footer />
-    </div>
+    </Router>
   );
 }
 
