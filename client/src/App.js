@@ -3,6 +3,7 @@ import './App.css';
 import React, { useEffect, useState } from 'react';
 import {BrowserRouter as Route,Redirect } from "react-router-dom";
 import axios from 'axios';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 // Components
 import Header from './Components/Header';
@@ -17,16 +18,14 @@ import Post from './Pages/Post';
 function App() {
 
   const [isSignin, setIsSignin] = useState(false);
-  const [userinfo, setUserinfo] = useState(null);
+  const [userInfo, setUserInfo] = useState(null);
 
   const isAuthenticated = (token) => {
-    const data= axios.get('',{accessToken:token,message:''},{ headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json"
-    },
+    const data= axios.get('',{accessToken:token,message:''},
+    { headers: {Accept: "application/json","Content-Type": "application/json"},
     withCredentials: true
   })
-  setUserinfo(data)
+  setUserInfo(data)
   setIsSignin(true)
   };
 
@@ -36,7 +35,7 @@ function App() {
 
   const handleSignout = () => {
     axios.post('https://api.whatever_discussion.co.kr/auth/signout').then((res) => {
-      setUserinfo(null);
+      setUserInfo(null);
       setIsSignin(false);
     });
   };

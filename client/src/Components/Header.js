@@ -6,14 +6,11 @@ import { useState } from 'react';
 function Header() {
   const [style, setStyle] = useState({display: 'block'})
   const setDisplay = function () {
-    const menu = document.getElementsByClassName('menu')
-    if(menu.style === 'none') {
+    if(style.display === 'none') {
       setStyle({display: 'block'})
     } else {
       setStyle({display: 'none'})
     }
-
-    console.log(style)
   }
 
   return (

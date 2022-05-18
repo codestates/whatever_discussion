@@ -6,21 +6,21 @@ import axios from 'axios';
 axios.defaults.withCredentials = true;
 
 function Signup() {
-  const [userinfo, setuserinfo] = useState({
+  const [userInfo, setUserInfo] = useState({
     userId: '',
-    nickName: '',
+    nickname: '',
     password: '',
     mbti: ''
   });
   const [errorMessage, setErrorMessage] = useState('');
   
   const handleInputValue = (key) => (e) => {
-    setuserinfo({ ...userinfo, [key]: e.target.value });
+    setUserInfo({ ...userInfo, [key]: e.target.value });
   };
   const handleSignup = () => {
       
-    if( userinfo.userId && userinfo.nickName && userinfo.password && userinfo.mbti ){
-      axios.post('https://api.whatever_discussion.co.kr/auth/signup',{ data:userinfo, message: '' },
+    if( userInfo.userId && userInfo.nickname && userInfo.password && userInfo.mbti ){
+      axios.post('https://api.whatever_discussion.co.kr/auth/signup',{ data:userInfo, message: '' },
       { headers: {Accept: "application/json","Content-Type": "application/json"}, withCredentials: true })}
       else {
       setErrorMessage()
