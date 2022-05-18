@@ -1,6 +1,7 @@
 import './Post.css';
 import postPic from '../Images/post.jpg'
-import recommend from '../Icons/recommend.svg'
+import Comment from '../Components/Comment';
+import dummy from '../Components/comments.json'
 
 function Post() {
   return (
@@ -43,7 +44,7 @@ function Post() {
             <div className='commentLeft'>
               <div></div>
               <p>댓글</p>
-              <p>00</p>
+              <p>{dummy.comments.length}</p>
             </div>
             <div className='commentRight'>
               <select>
@@ -61,30 +62,14 @@ function Post() {
               <p>아이디</p>
             </div>
             <div>
-              <input type='text' placeholder='댓글을 남겨보세요.'></input>
-              <button>등록</button>
+              <form>
+                <input type='text' placeholder='댓글을 남겨보세요.' required></input>
+                <input type='submit' value='등록' onClick={() => alert('게시물 업로드')}></input>
+              </form>
             </div>
           </div>
-
-          <div className='commentLists'>
-            <div>
-              <div>
-                <p>아이디</p>
-                <div>MBTI</div>
-                <p>1시간 전</p>
-              </div>
-              <div>
-                <button>x</button>
-                <div>찬성</div>
-                <p>공감</p>
-                <p>00</p>
-              </div>
-            </div>
-            <div>
-              <p>누군가 작성한 댓글입니다.</p>
-              <img src={recommend} alt='Recommend Icon'></img>
-            </div>
-          </div>
+          
+          <Comment />
 
         </div>
       </div>
