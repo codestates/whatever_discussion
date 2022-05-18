@@ -23,6 +23,7 @@ function Header() {
       <div className='menu' style={style}>
         <a href='/signup'><div>회원가입</div></a>
         <a href='/signin'><div>Login</div></a>
+        <div onClick={() => alert('로그아웃')}>Logout</div>
         <a><div>Mypage</div></a>
       </div>
     </div>

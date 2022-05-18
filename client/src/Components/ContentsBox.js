@@ -7,9 +7,11 @@ function ContentsBox({content}) {
   return (
     <div>
       <div className='board' key={content.id}>
-        <div className='imgBox'>
-          <img src={content.image}></img>
-        </div>
+        <a href='/post'>
+          <div className='imgBox'>
+            <img src={content.image}></img>
+          </div>
+        </a>
         <div className='topic'>Topic</div>
         <h3 className='title'>{content.subject}</h3>
         <div className='iconBox'>

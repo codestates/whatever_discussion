@@ -10,9 +10,17 @@
   width: 400px;
 }
 
+.banner > h1 {
+  margin-top: -50px;
+}
+
 .banner > p {
   font-size: 18px;
   margin-top: 10px;
+}
+
+.banner > p:last-child {
+  margin-top: 0px;
 }
 
 .searchLine {

@@ -8,7 +8,8 @@ function Main({dummy}) {
       <div className='banner'>
         <img src={Logo} alt='logo'></img>
         <h1>whatever_discussion</h1>
-        <p>MBTI와 함께하는 일상의 사소한 논쟁</p>
+        <p>서로를 이해해보는 커뮤니티, 각기 다른 16가지 mbti가 모여 한곳에서 이야기를 나누는 공간</p>
+        <p>이곳은 <b>whatever discussion</b> 입니다.</p>
       </div>
       <div className='searchLine'>
         <div>
