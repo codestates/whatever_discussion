@@ -1,5 +1,6 @@
 
-.env
+# pem
+*.pem
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,macos
