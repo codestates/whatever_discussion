@@ -15,7 +15,7 @@ module.exports={
                 nickname,
                 mbti
               })
-              console.log('@@@@@@@@@@@',newuser)
+            //   console.log('@@@@@@@@@@@',newuser)
             
               res.status(201).json({message: "You are successfully registered in this service."})
 
