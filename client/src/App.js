@@ -47,10 +47,9 @@ function App() {
   }
 
   
-
-  // useEffect(() => {
-  //   isAuthenticated();
-  // }, []);
+  useEffect(() => {
+    setIsSignin();
+  });
 
     return (
       <div>

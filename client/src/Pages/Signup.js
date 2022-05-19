@@ -1,6 +1,7 @@
 import './Signup.css';
 import{ useState } from 'react';
 import axios from 'axios';
+import {useNavigate} from 'react-router-dom'
   
 axios.defaults.withCredentials = true;
 
@@ -13,6 +14,8 @@ function Signup() {
     mbti: ''
   });
   
+  const navigate = useNavigate()
+
   const handleInputValue = (key) => (e) => {
     setUserInfo({ ...userInfo, [key]: e.target.value });
   };
@@ -20,6 +23,7 @@ function Signup() {
   const handleSignup = async() => {
     if( userInfo.userId && userInfo.nickname && userInfo.password && userInfo.mbti && userInfo.username ){
       await axios.post('http://localhost:4000/auth/signup',userInfo)
+      navigate('/signin')
     } else if(!userInfo.userId || !userInfo.nickname || !userInfo.password || !userInfo.mbti || !userInfo.username){
       return alert('Insufficient data were provided to server.')
     }
