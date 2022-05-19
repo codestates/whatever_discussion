@@ -1,0 +1,309 @@
+.postpage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.post {
+  display: flex;
+  flex-direction: column;
+  width: 900px;
+  height: 650px;
+  border: 1px solid #000;
+  /* padding: 20px; */
+  align-items: center;
+  margin: 30px auto;
+}
+
+.post > img {
+  /* max-width: 700px;
+  max-height: 400px; */
+  width: 700px;
+  height: 400px;
+  margin-top: 40px;
+  border: 2px solid #000;
+}
+
+.post > .subject {
+  display: flex;
+  align-items: center;
+  /* border: 1px solid red; */
+  align-self: flex-start;
+  margin-left: 100px;
+  margin-top: 10px;
+}
+
+.post > .subject > div {
+  width: 40px;
+  background-color: #0077B6;
+  color: #fff;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 4px 4px 6px 4px;
+}
+
+.post > .subject > p {
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.post > .content {
+  border: 1px solid #000;
+  margin-top: 10px;
+}
+
+.post > .content > div {
+  width: 700px;
+  height: 60px;
+}
+
+.post > .content > div > p {
+  padding: 5px;
+}
+
+.post > .vote > div {
+  width: 700px;
+  height: 40px;
+  border: 1px solid #000;
+  display: flex;
+  margin-top: 10px;
+}
+
+.post > .vote > div > .agree {
+  width: 392px;
+  /* width: 350px; */
+  background-color: blue;
+  /* background-color: grey; */
+}
+
+.post > .vote > div > .disagree {
+  width: 308px;
+  /* width: 350px; */
+  background-color: red;
+  /* background-color: grey; */
+  text-align: right;
+}
+
+.post > .vote > div > div > p {
+  padding: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.modify {
+  display: flex;
+  /* border: 1px solid #000; */
+  width: 900px;
+  justify-content: right;
+  margin-top: -20px;
+  margin-bottom: 5px;
+}
+
+.modify > button {
+  padding: 5px;
+  width: 40px;
+}
+
+.modify > button:first-child {
+  margin-right: 5px;
+}
+
+.line {
+  border-top: 2px solid #000;
+  width: 1210px;
+  margin: 10px 0;
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  padding: 5px;
+  margin: 5px;
+  width: 1200px;
+}
+
+.comments > .commentOptions {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+}
+
+.commentOptions > .commentLeft {
+  display: flex;
+  /* border: 1px solid blue; */
+  font-size: 18px;
+  align-items: center;
+}
+
+.commentOptions > .commentLeft > div {
+  width: 10px;
+  height: 25px;
+  background-color: #0077B6;
+}
+
+.commentOptions > .commentLeft > p:nth-child(2) {
+  margin-left: 5px;
+}
+
+.commentOptions > .commentLeft > p:nth-child(3) {
+  margin-left: 2px;
+}
+
+
+.commentOptions > .commentRight {
+  display: flex;
+  /* border: 1px solid yellow; */
+  width: 300px;
+  justify-content: right;
+  align-items: center;
+  font-size: 18px;
+}
+
+.commentOptions > .commentRight > select {
+  font-size: 16px;
+  padding: 2px;
+}
+
+.commentOptions > .commentRight > p {
+  margin-left: 5px;
+  font-weight: bold;
+}
+
+.comments {
+  margin-bottom: 10px;
+}
+
+.comments > .commentWrite {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  margin-top: 10px;
+}
+
+.comments > .commentWrite > div:first-child > p {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.comments > .commentWrite > div:last-child {
+  display: flex;
+  margin-left: 5px;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  align-items: center;
+}
+
+.comments > .commentWrite > div:last-child > form {
+  display: flex;
+  align-items: center;
+}
+
+.comments > .commentWrite > div:last-child > form > input:first-child {
+  font-size: 16px;
+  width: 1130px;
+  padding: 5px;
+  margin-top: 5px;
+}
+
+.comments > .commentWrite > div:last-child > form > input:last-child {
+  margin-left: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 16px;
+  border: 0;
+  outline: 0;
+  background-color: #0077B6;
+  color: #fff;
+}
+
+.commentLists > div {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #000;
+  margin-top: 10px;
+}
+
+.commentLists > div > div:first-child {
+  display: flex;
+  /* border: 1px solid yellow; */
+  justify-content: space-between;
+}
+
+.commentLists > div > div:first-child > div:first-child {
+  /* border: 1px solid #000; */
+  display: flex;
+  align-items: center;
+  padding: 2px 0;
+}
+
+.commentLists > div > div:first-child > div:first-child > p:first-child {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+
+.commentLists > div > div:first-child > div:first-child > div {
+  background-color: #0077B6;
+  color: #fff;
+  padding: 2px 5px;
+  margin-left: 5px;
+}
+
+.commentLists > div > div:first-child > div:first-child > p:last-child {
+  margin-left: 5px;
+}
+
+.commentLists > div > div:first-child > div:last-child {
+  /* border: 1px solid blue; */
+  display: flex;
+}
+
+.commentLists > div > div:first-child > div:last-child {
+  /* border: 1px solid blue; */
+  display: flex;
+  align-items: center;
+}
+
+.commentLists > div > div:first-child > div:last-child > button:first-child {
+  font-size: 18px;
+  padding: 2px 5px;
+  background-color: grey;
+  color: #000;
+}
+
+.commentLists > div > div:first-child > div:last-child > div:nth-child(2) {
+  margin-left: 5px;
+  background-color: blue;
+  color: #fff;
+  font-weight: bold;
+  padding: 2px 5px;
+}
+
+.commentLists > div > div:first-child > div:last-child > p:nth-child(3) {
+  margin-left: 5px;
+}
+
+.commentLists > div > div:first-child > div:last-child > p:nth-child(4) {
+  margin: 0px 5px 0px 0px;
+} 
+
+
+.commentLists > div > div > div:last-child {
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.commentLists > div > div > div:last-child > p {
+  padding: 0px 5px 2px 0px;
+  margin-left: 5px;
+}
+
+.commentLists > div > div > div:last-child > img {
+  width: 30px;
+  margin-right: 2px;
+}

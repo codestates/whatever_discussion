@@ -1,0 +1,39 @@
+.header {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0077B6;
+  color: #fff;
+  font-size: 24px;
+}
+
+.header > a:first-child img {
+  margin-left: 20px;
+  height: 80px;
+  margin-top: -5px;
+  /* margin-right: 950px; */
+}
+
+.header > img {
+  height: 50px;
+  margin-right: 20px;
+}
+
+.menu {
+  width: 100px;
+  border-left: 1px solid #000;
+  /* position: absolute;
+  right: 215px; */
+  float: right;
+}
+
+.menu a {
+  color: #000;
+}
+
+.menu div {
+  border-bottom: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+}

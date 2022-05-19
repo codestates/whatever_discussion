@@ -22,15 +22,13 @@ module.exports = {
             // console.log(accessToken)확인완료
             
             sendAccessToken(res,accessToken);
-            res.json({message: "You are successfully logged in."})
+            res.json({message: "You are successfully logged in.",data:{
+                userInfo:userInfo.dataValues
+            }})
 
         } catch (err) {
             console.log(err)
             res.status(500).json({ message: "Server is out of order." })
         }
-
-
     }
-
-
 }

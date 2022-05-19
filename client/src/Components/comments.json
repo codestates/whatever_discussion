@@ -1,0 +1,23 @@
+{
+  "comments": [
+    {
+      "id": 1,
+      "mbti": "INTP",
+      "time": "2022-05-19 23:00:00'UTC",
+      "agree": "찬성",
+      "likes": "12",
+      "comment": "깻잎을 떼는 걸 도와줘도 상관 없다.",
+      "userId": "김코딩"
+    },
+
+    {
+      "id": 2,
+      "mbti": "ESFP",
+      "time": "2022-05-18 22:00:00'UTC",
+      "agree": "반대",
+      "likes": "34",
+      "comment": "아무리 내 친구라도 남자친구가 도와주는 건 아니지.",
+      "userId": "codestates"
+    }
+  ]
+}
