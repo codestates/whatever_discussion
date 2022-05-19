@@ -7,7 +7,7 @@ module.exports={
             if(!userId||!password||!username||!nickname||!mbti){
                 return res.status(400).json({message: "Insufficient data were provided to server. Put in all the data."})
             } 
-            // console.log(userId,password,username,nickname,mbti)
+             console.log(userId,password,username,nickname,mbti)
             const newuser = await users.create({
                 userId,
                 password,

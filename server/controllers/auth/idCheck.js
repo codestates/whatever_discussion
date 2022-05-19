@@ -4,7 +4,6 @@ module.exports = {
     get: async (req, res) => {
         try {
             const { userId } = req.params;
-            console.log(req.params)
             if (!userId) {
                 return res.json({ message: "Please enter the userId" })
             } else {
