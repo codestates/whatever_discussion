@@ -1,4 +1,6 @@
+const { like } = require('./index.js');
+
 module.exports={
-    post:()=>{},
-    delete:()=>{}
+    post: async (req, res) => {},
+    delete: async (req, res) => {}
 }

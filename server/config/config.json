@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "Lucky7@@##",
+    "database": "whatever_dev",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "Lucky7@@##",
+    "database": "whatever_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "Lucky7@@##",
+    "database": "whatever_prod",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
