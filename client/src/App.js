@@ -55,7 +55,7 @@ function App() {
         <Header isSignin={isSignin} handleLogout={handleLogout}/>
         <Routes>
           <Route exact path='/' element={ <Main dummy={dummy}/> } /> 
-          <Route path='/signin' element={ <Signin handleResponseSuccess={handleResponseSuccess} isSignin={isSignin} /> } /> 
+          <Route path='/signin' element={ <Signin handleResponseSuccess={handleResponseSuccess} handleResponseFail={handleResponseFail} isSignin={isSignin} /> } /> 
           <Route path='/signup' element={ <Signup /> } /> 
           <Route path='/post' element={ <Post /> } /> 
         </Routes>
