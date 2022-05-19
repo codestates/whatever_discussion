@@ -19,7 +19,7 @@ function Signup() {
   const handleSignup = () => {
 
     if( userInfo.userId && userInfo.nickname && userInfo.password && userInfo.mbti ){
-      axios.post('https://api.whatever_discussion.co.kr/auth/signup',{ data:userInfo, message: 'signup' },
+      axios.post('http://localhost:4000/auth/signup',{ data:userInfo, message: 'signup' },
       { headers: {Accept: "application/json","Content-Type": "application/json"}, withCredentials: true })}
 
       else if(!userInfo.userId || !userInfo.nickname || !userInfo.password || !userInfo.mbti ){
@@ -28,7 +28,7 @@ function Signup() {
   };
   
   const handleFindId = () => {
-    const findId = axios.get('https://api.whatever_discussion.co.kr/auth/idCheck',{userId:userInfo.userId,message:''})
+    const findId = axios.get('http://localhost:4000/auth/idCheck',{userId:userInfo.userId,message:''})
     
     return findId.message
     // if(findId) {

@@ -14,7 +14,7 @@ module.exports ={
     },
     delete: async (req, res) => {
         try {
-            const {accessToken}= req.cookie.accessToken
+            const {accessToken}= req.cookie.accessToken;
             const userInfo = await isAuthorized(accessToken);
             if (!userInfo) {
                 res.status(401).json({message: "Request for comment deletion was denied due to unauthorized request." });
