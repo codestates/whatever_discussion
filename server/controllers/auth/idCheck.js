@@ -13,7 +13,7 @@ module.exports = {
 
                 // console.log(userInfo)
                 if (userInfo) {
-                    return res.status(409).json({ message: "This id already exists." })
+                    return res.status(200).json({ message: "This id already exists." })
                 } else {
                     return res.json({ message: "You can use this id." })
                 }

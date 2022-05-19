@@ -15,7 +15,7 @@ module.exports = {
             });
             // console.log('@@@@@@@',userInfo)
             if (!userInfo) {
-                return res.status(404).json({ message: "The user is not in the database." })
+                return res.status(201).json({ message: "The user is not in the database." })
             }
             delete userInfo.dataValues.password;
             const accessToken = generateAccessToken(userInfo.dataValues);
