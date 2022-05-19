@@ -46,6 +46,8 @@ function App() {
     navigate('/signin')
   }
 
+  
+
   // useEffect(() => {
   //   isAuthenticated();
   // }, []);

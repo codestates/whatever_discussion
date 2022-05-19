@@ -20,8 +20,7 @@ function Signin({ handleResponseSuccess, handleResponseFail,isSignin}) {
   const handleSignin = () => {
 
     if(signinInfo.userId && signinInfo.password) {
-      axios.post('http://localhost:4000/auth/signin',signinInfo,
-      { headers: {Accept: "application/json","Content-Type": "application/json"},withCredentials: true})
+      axios.post('http://localhost:4000/auth/signin',signinInfo)
       .then((res)=>
       res.data.message==="You are successfully logged in." ? handleResponseSuccess(res.data.accessToken): handleResponseFail() 
       )

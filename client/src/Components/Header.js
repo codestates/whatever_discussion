@@ -22,10 +22,10 @@ function Header({isSignin,handleLogout}) {
         <img src={accountIcon} alt='accountIcon' onClick={setDisplay}></img>
       </div>
       <div className='menu' style={style}>
-        <a href='/signup'><div>Signup</div></a>
+        {!isSignin? <a href='/signup'><div>Signup</div></a>:
+        <a><div>Mypage</div></a>}
         {!isSignin ? <a href='/signin'><div>Login</div></a>:
         <div onClick={handleLogout}>Logout</div>}
-        <a><div>Mypage</div></a>
       </div>
     </div>
   );

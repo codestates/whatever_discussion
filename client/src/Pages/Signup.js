@@ -8,6 +8,7 @@ function Signup() {
   const [userInfo, setUserInfo] = useState({
     userId: '',
     nickname: '',
+    username:'',
     password: '',
     mbti: ''
   });
@@ -16,14 +17,11 @@ function Signup() {
     setUserInfo({ ...userInfo, [key]: e.target.value });
   };
 
-  const handleSignup = () => {
-
-    if( userInfo.userId && userInfo.nickname && userInfo.password && userInfo.mbti ){
-      axios.post('https://api.whatever_discussion.co.kr/auth/signup',userInfo,
-      { headers: {Accept: "application/json","Content-Type": "application/json"}, withCredentials: true })}
-
-      else if(!userInfo.userId || !userInfo.nickname || !userInfo.password || !userInfo.mbti ){
-        return alert('Insufficient data were provided to server.')
+  const handleSignup = async() => {
+    if( userInfo.userId && userInfo.nickname && userInfo.password && userInfo.mbti && userInfo.username ){
+      await axios.post('http://localhost:4000/auth/signup',userInfo)
+    } else if(!userInfo.userId || !userInfo.nickname || !userInfo.password || !userInfo.mbti || !userInfo.username){
+      return alert('Insufficient data were provided to server.')
     }
   };
   
@@ -41,8 +39,8 @@ function Signup() {
     
   }
 
-  const handleFindNickname = () => {
-    const findNickname = axios.get(`http://localhost:4000/auth/nicknameCheck/${userInfo.nickname}`)
+  const handleFindNickname = async() => {
+    const findNickname = await axios.get(`http://localhost:4000/auth/nicknameCheck/${userInfo.nickname}`)
     
     if(!userInfo.nickname){
       return alert('please input Nickname')
@@ -59,6 +57,7 @@ function Signup() {
       <form onSubmit={(e) => e.preventDefault()}>
         <div className='signUp'>
           <h2>회원가입</h2>
+          <input type='text' placeholder='이름' onChange={handleInputValue('username')} required></input>
           <div>
             <input type='text' placeholder='아이디' onChange={handleInputValue('userId')} required></input>
             <button type='button' onClick={handleFindId}>중복확인</button>
@@ -68,7 +67,7 @@ function Signup() {
             <button type='button' onClick={handleFindNickname}>중복확인</button>
           </div>
 
-          <input type='password' placeholder='비밀번호' minlength='6' onChange={handleInputValue('password')} required></input>
+          <input type='password' placeholder='비밀번호'  onChange={handleInputValue('password')} required></input>
           <input type='text' placeholder='MBTI' onChange={handleInputValue('mbti')} required></input>
           
           <input type='submit' value='회원가입' onClick={handleSignup}></input>
