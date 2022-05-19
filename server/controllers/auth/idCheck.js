@@ -4,6 +4,7 @@ module.exports = {
     get: async (req, res) => {
         try {
             const { userId } = req.params;
+            console.log(req.params)
             if (!userId) {
                 return res.json({ message: "Please enter the userId" })
             } else {
@@ -13,7 +14,7 @@ module.exports = {
 
                 // console.log(userInfo)
                 if (userInfo) {
-                    return res.status(409).json({ message: "This id already exists." })
+                    return res.status(200).json({ message: "This id already exists." })
                 } else {
                     return res.json({ message: "You can use this id." })
                 }

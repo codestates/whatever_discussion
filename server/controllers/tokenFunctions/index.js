@@ -16,7 +16,7 @@ module.exports = {
           // sameSite: 'none'
         };
         res.cookie('accessToken', accessToken, cookieOptions);
-        console.log('@@@@@',res.cookie.accessToken)
+        return res.send({message: "You are successfully logged in.",accessToken:accessToken})
       },
     //accestoken 검증
     isAuthorized: (accessToken) => {

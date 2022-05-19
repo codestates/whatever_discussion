@@ -4,7 +4,7 @@ const { generateAccessToken, sendAccessToken } = require('../tokenFunctions');
 
 module.exports = {
     post: async (req, res) => {
-        try { 
+        try {
             const { userId, password } = req.body;
             // console.log(userId,password)
             if (!userId || !password) {
@@ -17,15 +17,11 @@ module.exports = {
             if (!userInfo) {
                 return res.status(404).json({ message: "The user is not in the database." })
             }
+
             delete userInfo.dataValues.password;
             const accessToken = generateAccessToken(userInfo.dataValues);
             // console.log(accessToken)확인완료
-            
-            sendAccessToken(res,accessToken);
-            res.json({message: "You are successfully logged in.",data:{
-                userInfo:userInfo.dataValues
-            }})
-
+            sendAccessToken(res,accessToken)
         } catch (err) {
             console.log(err)
             res.status(500).json({ message: "Server is out of order." })

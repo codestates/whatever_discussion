@@ -4,6 +4,7 @@ import accountIcon from '../Icons/account.svg'
 import { useState } from 'react';
 
 function Header() {
+  const [islogin,setIslogin] = useState(false)
   const [style, setStyle] = useState({display: 'none'})
   const setDisplay = function () {
     if(style.display === 'none') { 
@@ -21,9 +22,9 @@ function Header() {
         <img src={accountIcon} alt='accountIcon' onClick={setDisplay}></img>
       </div>
       <div className='menu' style={style}>
-        <a href='/signup'><div>회원가입</div></a>
-        <a href='/signin'><div>Login</div></a>
-        <div onClick={() => alert('로그아웃')}>Logout</div>
+        <a href='/signup'><div>Signup</div></a>
+        {!islogin ? <a href='/signin'><div>Login</div></a>:
+        <div onClick={() => alert('로그아웃')}>Logout</div>}
         <a><div>Mypage</div></a>
       </div>
     </div>

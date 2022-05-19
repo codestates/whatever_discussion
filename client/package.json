@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -40,21 +39,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
-}
-=======
-  "name": "whatever_discussion_client",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "axios": "^0.27.2",
-    "react": "^18.1.0"
+  "devDependencies": {
+    "sequelize-cli": "^6.4.1"
   }
 }
->>>>>>> de9f146 (to sync)

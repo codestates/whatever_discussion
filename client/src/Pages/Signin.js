@@ -20,9 +20,9 @@ function Signin({ handleResponseSuccess}) {
   const handleSignin = () => {
 
     if(signinInfo.userId && signinInfo.password) {
-      axios.post('https://api.whatever_discussion.co.kr/auth/signin',{data:signinInfo,message:'signin'},
+      axios.post('http://localhost:4000/auth/signin',signinInfo,
       { headers: {Accept: "application/json","Content-Type": "application/json"},withCredentials: true})
-      .then((res)=>handleResponseSuccess(res.data.accessToken))
+      .then((res)=>handleResponseSuccess(res.data))
     }
     
     if(!signinInfo.userId || !signinInfo.password) {
@@ -36,7 +36,7 @@ function Signin({ handleResponseSuccess}) {
             <img src={logo} alt='logo'></img>
             <h2>로그인</h2>
             <input type='text' placeholder='아이디' onChange={handleInputValue('userId')} required></input>
-            <input type='text' placeholder='비밀번호' onChange={handleInputValue('password')} required></input>
+            <input type='password' placeholder='비밀번호' onChange={handleInputValue('password')} required></input>
             <div>
               <p>처음 방문하셨나요?</p>
               <input type="submit" value="로그인" onClick={handleSignin}></input>

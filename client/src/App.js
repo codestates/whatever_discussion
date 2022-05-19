@@ -20,18 +20,11 @@ function App() {
   const [isSignin, setIsSignin] = useState(false);
 
   const isAuthenticated = (token) => {
-    const data= axios.get('https://api.whatever_discussion.co.kr/auth/signin',{accessToken:token,message:''},
-    { headers: {Accept: "application/json","Content-Type": "application/json"},withCredentials: true})
     setIsSignin(true)
   };
 
   const handleResponseSuccess = (token) => {
-    if(token){
       isAuthenticated(token)
-      return alert('You are successfully logged in.')
-    } else {
-      return alert('The user is not in the database.')
-      }  
   };
 
   useEffect(() => {

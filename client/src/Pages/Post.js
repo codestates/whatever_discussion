@@ -6,6 +6,7 @@ import content from '../Components/content.json'
 
 
 function Post() {
+  
   return (
     <div>
       <div className='postpage'>

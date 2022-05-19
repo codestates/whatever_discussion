@@ -19,7 +19,7 @@ function Signup() {
   const handleSignup = () => {
 
     if( userInfo.userId && userInfo.nickname && userInfo.password && userInfo.mbti ){
-      axios.post('https://api.whatever_discussion.co.kr/auth/signup',{ data:userInfo, message: 'signup' },
+      axios.post('https://api.whatever_discussion.co.kr/auth/signup',userInfo,
       { headers: {Accept: "application/json","Content-Type": "application/json"}, withCredentials: true })}
 
       else if(!userInfo.userId || !userInfo.nickname || !userInfo.password || !userInfo.mbti ){
@@ -27,26 +27,31 @@ function Signup() {
     }
   };
   
-  const handleFindId = () => {
-    const findId = axios.get('https://api.whatever_discussion.co.kr/auth/idCheck',{userId:userInfo.userId,message:''})
+  const handleFindId = async() => {
+    if(!userInfo.userId){
+      return alert('please input Id')
+    }
+    const findId = await axios.get(`http://localhost:4000/auth/idCheck/${userInfo.userId}`)
     
-    return findId.message
-    // if(findId) {
-    //   return alert('This id already exists in this service. Please suggest another id.')
-    // } else {
-    //   return alert('You can make a user account using this id.') 
-    // }
+    if(findId.data.message==="This id already exists.") {
+      return alert('This id already exists in this service. Please suggest another id.')
+    } 
+    if(findId.data.message==="You can use this id."){
+      return alert('You can make a user account using this id.')}
+    
   }
 
   const handleFindNickname = () => {
-    const findNickname = axios.get('https://api.whatever_discussion.co.kr/auth/nicknameCheck',{nickname:userInfo.nickname,message:''})
+    const findNickname = axios.get(`http://localhost:4000/auth/nicknameCheck/${userInfo.nickname}`)
     
-    return findNickname.message
-    // if(findNickname) {
-    //   return alert('This id already exists in this service. Please suggest another id.')
-    // } else {
-    //   return alert('You can make a user account using this id.') 
-    // }
+    if(!userInfo.nickname){
+      return alert('please input Nickname')
+    }
+    if(findNickname.data.message==="This nickname already exists.") {
+      return alert('This nickname already exists in this service. Please suggest another id.')
+    } 
+    if(findNickname.data.message==="You can use this nickname."){
+      return alert('You can make a user account using this nickname.')}
   }
 
   return (
