@@ -6,7 +6,7 @@ import axios from 'axios';
 
 axios.defaults.withCredentials = true;
   
-function Signin({ handleResponseSuccess}) {
+function Signin({ handleResponseSuccess,handleResponseFail}) {
 
   const [signinInfo, setSigninInfo] = useState({
     userId: '',
@@ -22,9 +22,10 @@ function Signin({ handleResponseSuccess}) {
     if(signinInfo.userId && signinInfo.password) {
       axios.post('http://localhost:4000/auth/signin',signinInfo,
       { headers: {Accept: "application/json","Content-Type": "application/json"},withCredentials: true})
-      .then((res)=>handleResponseSuccess(res.data))
+      .then((res)=>
+      res.data.message==="You are successfully logged in." ? handleResponseSuccess(res.data.accessToken): handleResponseFail() 
+      )
     }
-    
     if(!signinInfo.userId || !signinInfo.password) {
       return alert('Insufficient data were provided to server.')
     } 
