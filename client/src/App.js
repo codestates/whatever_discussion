@@ -29,8 +29,7 @@ function App() {
   //   }
   // };
 
-  const handleResponseSuccess = (token) => {
-      //isAuthenticated(token)
+  const handleResponseSuccess = () => {
     setIsSignin(true)
     navigate('/')
     return alert('Login success')
@@ -47,9 +46,6 @@ function App() {
   }
 
   
-  useEffect(() => {
-    setIsSignin();
-  });
 
     return (
       <div>
