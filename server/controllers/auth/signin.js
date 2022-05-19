@@ -4,7 +4,7 @@ const { generateAccessToken, sendAccessToken } = require('../tokenFunctions');
 
 module.exports = {
     post: async (req, res) => {
-        try { 
+        try {
             const { userId, password } = req.body;
             // console.log(userId,password)
             if (!userId || !password) {
@@ -20,11 +20,13 @@ module.exports = {
             delete userInfo.dataValues.password;
             const accessToken = generateAccessToken(userInfo.dataValues);
             // console.log(accessToken)확인완료
-            
-            sendAccessToken(res,accessToken);
-            res.json({message: "You are successfully logged in.",data:{
-                userInfo:userInfo.dataValues
-            }})
+
+            sendAccessToken(res, accessToken);
+            res.json({
+                message: "You are successfully logged in.", data: {
+                    userInfo: userInfo.dataValues
+                }
+            })
 
         } catch (err) {
             console.log(err)
