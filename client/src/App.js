@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useEffect, useState} from 'react';
 import axios from 'axios';
-import { BrowserRouter as Router, Routes, Route ,useNavigate} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
 import dummy from './Components/content.json'
 
 
@@ -16,7 +16,6 @@ import Signup from './Pages/Signup';
 import Post from './Pages/Post';
 
 function App() {
-
   const navigate = useNavigate()
   const [isSignin, setIsSignin] = useState(false);
 
@@ -32,31 +31,37 @@ function App() {
 
   const handleResponseSuccess = (token) => {
       //isAuthenticated(token)
-    navigate('/')
     setIsSignin(true)
-    return alert('You are successfully logged in.')
+    navigate('/')
+    return alert('Login success')
   };
 
   const handleResponseFail =() => {
-    return alert('The user is not in the database.')
+    setIsSignin(false)
+    return alert('Login failed')
+  }
+
+  const handleLogout=() => {
+    setIsSignin(false)
+    navigate('/signin')
   }
 
   // useEffect(() => {
   //   isAuthenticated();
   // }, []);
 
-  return (
-    <Router>
-      <Header />
-      <Routes>
-        <Route exact path='/' element={ <Main dummy={dummy}/> } /> 
-        <Route path='/signin' element={ <Signin handleResponseSuccess={handleResponseSuccess} handleResponseFail={handleResponseFail}/> } /> 
-        <Route path='/signup' element={ <Signup /> } /> 
-        <Route path='/post' element={ <Post /> } /> 
-      </Routes>
-      <Footer />
-    </Router>
-  );
+    return (
+      <div>
+        <Header isSignin={isSignin} handleLogout={handleLogout}/>
+        <Routes>
+          <Route exact path='/' element={ <Main dummy={dummy}/> } /> 
+          <Route path='/signin' element={ <Signin handleResponseSuccess={handleResponseSuccess} isSignin={isSignin} /> } /> 
+          <Route path='/signup' element={ <Signup /> } /> 
+          <Route path='/post' element={ <Post /> } /> 
+        </Routes>
+        <Footer />
+      </div>
+    );
 }
 
 export default App;

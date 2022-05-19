@@ -1,12 +1,12 @@
 import './Signin.css';
 import logo from '../Images/LogoBlack.png'
 import React, { useState } from 'react';
-import {BrowserRouter as Route } from "react-router-dom";
+import {BrowserRouter as Router } from "react-router-dom";
 import axios from 'axios';
 
 axios.defaults.withCredentials = true;
   
-function Signin({ handleResponseSuccess,handleResponseFail}) {
+function Signin({ handleResponseSuccess, handleResponseFail,isSignin}) {
 
   const [signinInfo, setSigninInfo] = useState({
     userId: '',

@@ -21,9 +21,9 @@ function Main({dummy}) {
          <button className='search'>검색</button>
         </div>
       </div>
-      <div className='contentsSector'>
-        {dummy.content.map((content)=><ContentsBox content={content}/>)}
-      </div>
+       <div className='contentsSector'>
+       {dummy.content.map((content, index)=><ContentsBox content={content} key={index}/>)}
+       </div>
     </div>
   );
 }

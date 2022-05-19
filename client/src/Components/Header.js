@@ -3,8 +3,8 @@ import logo from '../Images/Logo.png'
 import accountIcon from '../Icons/account.svg'
 import { useState } from 'react';
 
-function Header() {
-  const [islogin,setIslogin] = useState(false)
+function Header({isSignin,handleLogout}) {
+  
   const [style, setStyle] = useState({display: 'none'})
   const setDisplay = function () {
     if(style.display === 'none') { 
@@ -23,8 +23,8 @@ function Header() {
       </div>
       <div className='menu' style={style}>
         <a href='/signup'><div>Signup</div></a>
-        {!islogin ? <a href='/signin'><div>Login</div></a>:
-        <div onClick={() => alert('로그아웃')}>Logout</div>}
+        {!isSignin ? <a href='/signin'><div>Login</div></a>:
+        <div onClick={handleLogout}>Logout</div>}
         <a><div>Mypage</div></a>
       </div>
     </div>
