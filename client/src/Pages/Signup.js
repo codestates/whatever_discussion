@@ -22,7 +22,7 @@ function Signup() {
 
   const handleSignup = async() => {
     if( userInfo.userId && userInfo.nickname && userInfo.password && userInfo.mbti && userInfo.username ){
-      await axios.post('http://localhost:4000/auth/signup',userInfo)
+      await axios.post('https://localhost:4000/auth/signup',userInfo)
       navigate('/signin')
     } else if(!userInfo.userId || !userInfo.nickname || !userInfo.password || !userInfo.mbti || !userInfo.username){
       return alert('Insufficient data were provided to server.')
@@ -33,7 +33,7 @@ function Signup() {
     if(!userInfo.userId){
       return alert('please input Id')
     }
-    const findId = await axios.get(`http://localhost:4000/auth/idCheck/${userInfo.userId}`)
+    const findId = await axios.get(`https://localhost:4000/auth/idCheck/${userInfo.userId}`)
     
     if(findId.data.message==="This id already exists.") {
       return alert('This id already exists in this service. Please suggest another id.')
@@ -44,7 +44,7 @@ function Signup() {
   }
 
   const handleFindNickname = async() => {
-    const findNickname = await axios.get(`http://localhost:4000/auth/nicknameCheck/${userInfo.nickname}`)
+    const findNickname = await axios.get(`https://localhost:4000/auth/nicknameCheck/${userInfo.nickname}`)
     
     if(!userInfo.nickname){
       return alert('please input Nickname')
