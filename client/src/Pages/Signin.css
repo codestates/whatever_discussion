@@ -1,0 +1,54 @@
+.signIn {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 480px;
+  border: 1px solid #000;
+  padding: 20px;
+  align-items: center;
+  margin: 150px auto;
+  border-radius: 20px;
+}
+
+.signIn > img {
+  width: 250px;
+  margin: -30px 0;
+  margin-right: 30px;
+}
+
+.signIn > h2 {
+  font-size: 32px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.signIn > input {
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 10px;
+  width: 300px;
+}
+
+.signIn > div {
+  width: 324px;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  justify-content: space-between;
+}
+
+.signIn > div > p {
+  font-size: 16px;
+  color: #0077B6;
+  font-weight: bold;
+  margin-left: 2px;
+}
+
+.signIn > div > input {
+  font-size: 20px;
+  padding: 4px 7px;
+  border: 0;
+  outline: 0;
+  background-color: #0077B6;
+  color: #fff;
+}
