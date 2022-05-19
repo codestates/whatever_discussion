@@ -1,0 +1,85 @@
+
+.board {
+    margin: 30px;
+    height:400px;
+    width: 400px;
+    border: 1.5px solid black;
+}
+
+.imgBox {
+    /* width:100%;
+    height:280px;
+    background-color:skyblue;
+    border-bottom:1.5px solid black; */
+}
+
+.imgBox > img {
+    width: 400px;
+    height: 240px;
+}
+
+.topic {
+    margin:10px;
+    width:50px;
+    padding: 4px 4px 6px 4px;
+    border-radius:5px;
+    font-size:18px;
+    color: #fff;
+    background-color: #0077B6;    
+    text-align:center;
+    font-weight: bold;
+    
+}
+
+.title {
+    margin-bottom:8px;
+    font-size:28px;
+    text-align:center;
+    color:black;
+}
+
+.iconBox {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.voteIconBox{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left:20px;
+}
+
+.voteIcon {
+    height:40px;
+    width:40px;
+}
+
+.repleIcon {
+    margin-left:22px;
+}
+
+.data {
+    margin-left:1px;
+    font-size:20px;
+    font-weight: 600;
+}
+
+.accountIconBox {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.accountIcon {
+    height:40px;
+    width:40px;
+}
+
+.userId {
+    margin-left:5px;
+    margin-right:10px;
+    font-size:20px;
+    font-weight: 450;
+}

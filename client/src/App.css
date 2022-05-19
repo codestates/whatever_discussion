@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 1400px;
+  /* height: 100vh; */
+  border: 1px solid #000;
+  margin: 0 auto;
+  border-top: 0;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  background-color: #0077B6;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
